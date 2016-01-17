@@ -1,0 +1,18 @@
+<ion-view view-title="জেলা সমূহ">
+    
+    <div class="list list-inset search-bar">
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="Search" ng-model="searchText">
+        </label>
+    </div>
+    
+    <ion-content class="districtsContainer">
+        <ion-list>
+            <ion-item ng-repeat="district in districts | filter:searchText" href="#/app/home/{{district.id}}">
+                {{district.disnameb}}
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>
